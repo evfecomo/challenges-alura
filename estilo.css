@@ -11,7 +11,7 @@
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url("image_i2KUp3.jpg"); /* <-- Solo cambia .png por .jpg aquí */
+  background-image: url("image_i2KUp3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
