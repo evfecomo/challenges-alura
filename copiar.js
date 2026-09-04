@@ -1,16 +1,15 @@
-var buttonCopy = document.querySelector("#btn-copy"); 
-                              
-function copiar() {
+let botonCopiarMensaje = document.querySelector("#btn-copy");
+let cuadroTextoCopiado = document.querySelector("#msg");
 
-    var content = textoInput;
-    
-    content.select(); 
-    document.execCommand("copy"); 
+function copiarTexto() {
+    let contenidoACopiar = cuadroTextoCopiado.value;
 
+    navigator.clipboard.writeText(contenidoACopiar);
+
+    cuadroTextoCopiado.value = "";
 }
 
-buttonCopy.addEventListener('click', (e)=>{
-e.preventDefault();
-copiar()   
+botonCopiarMensaje.addEventListener('click', (e) => {
+    e.preventDefault();
+    copiarTexto();
 });
-   

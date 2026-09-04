@@ -1,18 +1,21 @@
-var buttonEncriptar = document.querySelector("#btn-encriptar");
-var imput = document.querySelector("#input-texto");
-var textoInput = document.querySelector("#msg");
+let botonCifrar = document.querySelector("#btn-encriptar");
+let cajaTextoEntrada = document.querySelector("#input-texto");
+let cajaTextoSalida = document.querySelector("#msg");
 
-function encriptar () {
-    var texto = imput.value;
-    textoEncrirtar = texto.replace(/[e]/g, "enter")
-                            .replace(/[i]/g, "imes")
-                            .replace(/[a]/g, "ai")
-                            .replace(/[o]/g, "ober") 
-                            .replace(/[u]/g, "ufat");
-    textoInput.value = textoEncrirtar;
-    imput.value = "";
+function encriptar() {
+    let textoOriginal = cajaTextoEntrada.value; 
+    
+    let textoCifrado = textoOriginal.replace(/e/g, "enter")
+                                    .replace(/i/g, "imes")
+                                    .replace(/a/g, "ai")
+                                    .replace(/o/g, "ober")
+                                    .replace(/u/g, "ufat");
+    
+    cajaTextoSalida.value = textoCifrado;
+    cajaTextoEntrada.value = ""; 
 }
-buttonEncriptar.addEventListener('click', (e)=>{
-e.preventDefault();
-encriptar()   
+
+botonCifrar.addEventListener('click', (e) => {
+    e.preventDefault();
+    encriptar();   
 });
