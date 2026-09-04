@@ -6,6 +6,7 @@ function copiarTexto() {
 
     navigator.clipboard.writeText(contenidoACopiar);
 
+    // Esta es la línea que faltaba para borrar la caja automáticamente
     cuadroTextoCopiado.value = "";
 }
 
