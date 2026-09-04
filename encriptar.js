@@ -1,4 +1,4 @@
-let botonCifrar = document.querySelector("#btn-encriptar");
+let botonEncriptar = document.querySelector("#btn-encriptar");
 let cajaTextoEntrada = document.querySelector("#input-texto");
 let cajaTextoSalida = document.querySelector("#msg");
 
@@ -15,7 +15,7 @@ function encriptar() {
     cajaTextoEntrada.value = ""; 
 }
 
-botonCifrar.addEventListener('click', (e) => {
+botonEncriptar.addEventListener('click', (e) => {
     e.preventDefault();
     encriptar();   
 });
